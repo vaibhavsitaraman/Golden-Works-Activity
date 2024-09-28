@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primavera Mythological References - Score</title>
+    <link rel="stylesheet" href="score.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Your Score:</h1>
+        <p id="score"></p>
+        <button onclick="tryAgain()">Try Again</button>
+    </div>
+    <script>
+        // Retrieve score from localStorage and display it
+        const score = localStorage.getItem('score');
+        document.getElementById('score').textContent = score;
+
+        // Function to try again
+        function tryAgain() {
+            // Clear score and redirect to the main page
+            localStorage.removeItem('score');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
