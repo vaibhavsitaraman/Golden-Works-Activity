@@ -22,7 +22,7 @@ h3 {
 
 canvas {
     border: 5px solid #f4fa85;
-    background-image: url('/Users/sahilghosh/Documents/Coding/Random/PictureHunt/Primavera Botticelli.jpg'); /* Replace with the path to your image */
+    background-image: url('Primavera Botticelli.jpg'); 
     background-size: contain;
     background-repeat: no-repeat;
     cursor: crosshair;
