@@ -7,7 +7,7 @@ canvas.width = 800; // Set canvas width
 canvas.height = 525; // Set canvas height
 
 let clickCount = 0;
-const maxCircles = 6;
+const maxCircles = 1;
 const circleRadius = 40; // Updated radius to 40px
 const circles = [];
 
@@ -48,7 +48,7 @@ function isCenterInsideRegion(circle, region) {
 function calculateScore() {
     let score = 0;
     const mythologicalRegions = [
-        {x: 50, y: 100, width: 150, height: 150}, // Example region (rectangle)
+        {x: 0, y: 0, width: 300, height: 150, allegory: "golden balls"}, // Example region (rectangle)
         {x: 350, y: 250, width: 150, height: 150}, // Replace with actual mythological regions
         {x: 600, y: 200, width: 150, height: 150}, // Add more regions as needed
         // Add up to 6 regions in total or modify accordingly
@@ -58,6 +58,11 @@ function calculateScore() {
         mythologicalRegions.forEach(region => {
             if (isCenterInsideRegion(circle, region)) {
                 score += 1; // Increase score if the center of the circle is inside a region
+                switch(region.allegory){
+                    case "golden balls":
+                        window.location.href = "goldenballs.html"
+                        break;
+                }
             }
         });
     });
