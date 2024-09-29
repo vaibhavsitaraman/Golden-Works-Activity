@@ -16,6 +16,8 @@ function drawCircle(x, y) {
   ctx.fillStyle = 'rgba(0, 0, 255, 0.4)'; // Light blue semi-transparent circle
   ctx.fill();
   ctx.closePath();
+  console.log(x);
+  console.log(y);
 }
 
 // Event listener for clicking on the canvas to place circles
@@ -42,11 +44,12 @@ function isCenterInsideRegion(circle, region) {
 // Function to calculate score based on circle placement
 function calculateScore() {
   const mythologicalRegions = [
-    { x: 0, y: 0, width: 325, height: 125, allegory: "Golden Balls", exp: "The golden balls represent oranges. They are found on the Medici coat of arms." }, // Example region (rectangle)
-    { x: 0, y: 200, width: 125, height: 300, allegory: "Mercury", exp: "merc"}, // Replace with actual mythological regions
-    { x: 325, y: 0, width: 120, height: 50, allegory: "Cupid", exp: "cup"}, // Add more regions as needed
-    { x: 135, y: 200, width: 200, height: 300, allegory: "Three Graces", exp: "3 graces"},
-    // Add up to 6 regions in total or modify accordingly
+    { x: 370, y: 130, width: 110, height: 290, allegory: "Venus", exp: "Venus is the centerpiece of many of Botticelli's paintings. She is the god of love, marriage, etc." }, // Example region (rectangle)
+    { x: 0, y: 200, width: 125, height: 300, allegory: "Mercury", exp: "Mercury is the god of boundaries, and he is shown hear dispelling clouds from the garden."}, // Replace with actual mythological regions
+    { x: 325, y: 0, width: 120, height: 50, allegory: "Cupid", exp: "The god of affection, Cupid is portrayed alongside Venus, the god of love. This particular cupid is blind."}, // Add more regions as needed
+    { x: 135, y: 200, width: 200, height: 300, allegory: "Three Graces", exp: "The Three Graces are sisters who are associated with Venus. From left to right, they are Voluptas (Pleasure), Castitas (Chastity), and Pulchritudo (Beauty)."},
+    { x: 615, y: 120, width: 145, height: 140, allegory: "Zephyrus", exp: "The personification of the West wind, Zephyrus is depicted here kidnapping a nymph."},
+    { x: 500, y: 180, width: 150, height: 300, allegory: "Chloris/Flora", exp: "On the right is Chloris, the nymph who is kidnapped by Zephyrus and turned into the goddess Flora, who is found on the left scattering rose petals."},
   ];
 
   mythologicalRegions.forEach(region => {
